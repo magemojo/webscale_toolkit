@@ -1,15 +1,24 @@
-# dev_copy_python
+# Webscale Stratus Toolkit
 Ian Carey 
-Support dev copy script
+Python program to help support with daily tasks. Including backups and development copies.
 
-Last Update: 9-18-2020
+Last Update: 6-21-2022
 
-1. Make sure you are on the the DEV instance ( you are copying to this intance )
-2. git clone https://github.com/magemojo/dev_copy_python.git
-4. cd dev_copy_python
-5. python3 ./dev_copy.py
+### Requirements
+Requires PHP version greater than 7.0 and Magento version 2.3.0 or higher.
 
-6testing
+### Usage
+
+1. SSH in to the instance. Make sure you are in the /srv/ directory.
+2. git clone https://github.com/magemojo/webscale_toolkit.git
+3. cd webscale_toolkit
+4. python3 wstk.py
+
+#### For Main Menu
+Enter Magento root folder. example /srv/public_html
+
+#### For Dev Copy Menu
+Enter none at the prompt for Magento Root folder.
 
 
 

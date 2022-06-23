@@ -6,11 +6,11 @@ import json
 
 
 def get_path():
-    path = input(Colors.FG.LightGreen + Colors.Bold + "Production public_html path: " + Colors.Reset)
+    path = input(Colors.FG.LightGreen + Colors.Bold + "Root Magento Path (Example /srv/public_html): " + Colors.Reset)
     if path.endswith('/'):
-        print(Colors.FG.Red + Colors.Bold + "Path should not end with a /. Example /srv/public_html" + Colors.Reset)
-        get_path()
-        return
+        path_length = len(path)
+        path = path[:path_length - 1]
+        return path
     else:
         return path
 

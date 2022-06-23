@@ -46,8 +46,8 @@ def update_mysql_credentials_manual(config, path, menu_return):
 
 
 def get_mysql_credentials():
-    os.system('/usr/share/stratus/cli database.config > /srv/wstk/var/cred.log 2>&1')
-    result = shell.load_json_from_command("head -n1 /srv/wstk/var/cred.log")
+    os.system('/usr/share/stratus/cli database.config > /srv/webscale_toolkit/var/cred.log 2>&1')
+    result = shell.load_json_from_command("head -n1 /srv/webscale_toolkit/var/cred.log")
     if result is not False:
         db_creds = json.loads(result["args"][0].replace("Result:", ""))
         return db_creds

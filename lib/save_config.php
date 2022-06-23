@@ -1,6 +1,6 @@
 <?php
 $path = $argv[1];
-$config = json_decode( file_get_contents( '/srv/wstk/var/config.json' ), true );
+$config = json_decode( file_get_contents( '/srv/webscale_toolkit/var/config.json' ), true );
 
 
 function varexport($expression, $return=FALSE) {

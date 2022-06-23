@@ -82,7 +82,7 @@ def redis_menu(config, path):
 def rabbit_menu(config, path):
     choice = '0'
     while choice == '0':
-        print(Colors.FG.Green + "++++++=> " + Colors.FG.LightBlue + "RabbitmQ Menu:" + Colors.FG.Green + " <=++++++" + Colors.Reset)
+        print(Colors.FG.Green + "++++++=> " + Colors.FG.LightBlue + "RabbitMQ Menu:" + Colors.FG.Green + " <=++++++" + Colors.Reset)
         print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 1. " + Colors.FG.LightBlue + "Configure RabbitMQ" + Colors.Reset)
         print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 2. " + Colors.FG.LightBlue + "Back" + Colors.Reset)
         print(Colors.FG.Green + "+---------=> " + Colors.FG.Yellow + "Version " + version + " " + Colors.FG.Green + "<=---------+" + Colors.Reset)
@@ -155,7 +155,7 @@ def magento_patch_menu(config, path):
         choice = input(Colors.FG.Yellow + "Choose Menu Item: " + Colors.Reset)
 
         if choice == "3":
-            main_menu(path)
+           magento_menu(config, path)
         elif choice == "2":
             Patches.install_pdo_adapter_mysql8(config, path, 1)
         elif choice == "1":
@@ -179,7 +179,7 @@ def magento_backup_menu(config, path):
         choice = input(Colors.FG.Yellow + "Choose Menu Item: " + Colors.Reset)
 
         if choice == "6":
-            main_menu(path)
+            magento_menu(config, path)
         elif choice == "5":
             Backup.backup_local_custom(config, path, 0, 1)
         elif choice == "4":

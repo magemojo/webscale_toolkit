@@ -324,15 +324,15 @@ def dev_copy_menu(config, path):
         if config is False and path is False:
             print(Colors.FG.Green + "++++++=> " + Colors.FG.LightBlue + "Dev Copy Menu:" + Colors.FG.Green + " <=++++++" + Colors.Reset)
             print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 1. " + Colors.FG.LightBlue + "Dev Copy Default" + Colors.Reset)
-            print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 2. " + Colors.FG.LightBlue + "Dev Copy No Media" + Colors.Reset)
-            print(Colors.FG.Green + "=>" + Colors.FG.LightGrey + " 3. " + Colors.FG.LightGrey + "Exit" + Colors.Reset)
+            # print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 2. " + Colors.FG.LightBlue + "Dev Copy No Media" + Colors.Reset)
+            print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 3. " + Colors.FG.LightBlue + "Exit" + Colors.Reset)
             print(Colors.FG.Green + "+---------=> " + Colors.FG.Yellow + "Version " + version + " " + Colors.FG.Green + "<=---------+" + Colors.Reset)
 
             choice = input(Colors.FG.Yellow + "Choose Menu Item: " + Colors.Reset)
             if choice == "3":
                 sys.exit()
             elif choice == "2":
-                dev_copy_menu(config, path)
+                sys.exit()
             elif choice == "1":
                 Dev.dev_copy_default(config, path, 1)
             else:
@@ -341,15 +341,15 @@ def dev_copy_menu(config, path):
         else:
             print(Colors.FG.Green + "++++++=> " + Colors.FG.LightBlue + "Dev Copy Menu:" + Colors.FG.Green + " <=++++++" + Colors.Reset)
             print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 1. " + Colors.FG.LightBlue + "Dev Copy Default" + Colors.Reset)
-            print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 2. " + Colors.FG.LightBlue + "Dev Copy No Media" + Colors.Reset)
-            print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 3. " + Colors.FG.LightBlue + "Back" + Colors.Reset)
+            # print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 2. " + Colors.FG.LightBlue + "Dev Copy No Media" + Colors.Reset)
+            print(Colors.FG.Green + "=>" + Colors.FG.Yellow + " 2. " + Colors.FG.LightBlue + "Back" + Colors.Reset)
             print(Colors.FG.Green + "+---------=> " + Colors.FG.Yellow + "Version " + version + " " + Colors.FG.Green + "<=---------+" + Colors.Reset)
 
             choice = input(Colors.FG.Yellow + "Choose Menu Item: " + Colors.Reset)
             if choice == "3":
                 main_menu(config)
             elif choice == "2":
-                dev_copy_menu(config, path)
+                main_menu(config)
             elif choice == "1":
                 Dev.dev_copy_default(config, path, 1)
             else:

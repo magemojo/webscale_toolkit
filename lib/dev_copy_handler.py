@@ -325,7 +325,7 @@ class UserInput:
         dump_symlinks = os.popen(
             "ssh -i " + self.settings_dict["prod_ssh_privkey_path"] + " " + self.settings_dict["prod_ssh_user"] + "@" +
             self.settings_dict["prod_ssh_host"] + " -p" + self.settings_dict[
-                "prod_ssh_port"] + " 'find " + self.settings_dict["prod_public_html"] + "\ -type l -ls > link.txt 2>&1; cat link.txt'").read()
+                "prod_ssh_port"] + " 'find " + self.settings_dict["prod_public_html"] + "/ -type l -ls > link.txt 2>&1; cat link.txt'").read()
         os.popen("ssh -i " + self.settings_dict["prod_ssh_privkey_path"] + " " + self.settings_dict["prod_ssh_user"] + "@" +
                  self.settings_dict["prod_ssh_host"] + " -p" + self.settings_dict["prod_ssh_port"] + " 'rm link.txt'")
         cred_file = open("remote_links.log", "w")

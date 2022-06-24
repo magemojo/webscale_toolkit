@@ -296,7 +296,7 @@ class UserInput:
             dump_root_symlink = os.popen(
                 "ssh -i " + self.settings_dict["prod_ssh_privkey_path"] + " " + self.settings_dict[
                     "prod_ssh_user"] + "@" + self.settings_dict["prod_ssh_host"] + " -p" + self.settings_dict[
-                    "prod_ssh_port"] + " 'find " + new_path + "/ -type l -ls > root_link.log; cat root_link.log'").read()
+                    "prod_ssh_port"] + " 'find " + new_path + " -type l -ls > root_link.log; cat root_link.log'").read()
             os.popen("ssh -i " + self.settings_dict["prod_ssh_privkey_path"] + " " + self.settings_dict[
                 "prod_ssh_user"] + "@" + self.settings_dict["prod_ssh_host"] + " -p" + self.settings_dict[
                          "prod_ssh_port"] + " 'rm root_link.log'")

@@ -89,11 +89,7 @@ def rsync_production_files(settings_dict):
                                      settings_dict["prod_ssh_host"] + ":" +
                                      settings_dict["root_symlink"]["link_path"] + " " + new_path, ".")
         # recreate symlink
-        shell.run_bash_command(False, False, action,
-            "ssh -i " + settings_dict["prod_ssh_privkey_path"] + " " + settings_dict[
-                "prod_ssh_user"] + "@" + settings_dict["prod_ssh_host"] + " -p" + settings_dict[
-                "prod_ssh_port"] + " 'ln -s " + settings_dict["root_symlink"]["link_path"] + " " + settings_dict[
-                "prod_public_html"] + "'", "..")
+        shell.run_bash_command(False, False, action, "ln -s " + settings_dict["root_symlink"]["link_path"] + " " + settings_dict["prod_public_html"], "..")
     else:
         # remove last portion of root path for rsync target
         new = settings_dict["prod_public_html"].split("/")
